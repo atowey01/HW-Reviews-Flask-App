@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content-section">
+<form action="/predict" method="POST">
+    <h4>Enter the URL of a hostel from Hostelworld:</h4>
+ <textarea name="review_text" placeholder="" rows="3" cols="15"></textarea>
+    <input type="submit" value="Analyse Reviews...">
+</form>
+    <br>
+    <div class="retrieve-notice">
+    <p>Note: It may take up to a minute to retrieve and analyse all reviews, hang tight!</p>
+        </div>
+ </div>
+<style>
+ul {
+    align:center;
+    text-align:center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #2c3e50;
+}
+</style>
+{% endblock content %}

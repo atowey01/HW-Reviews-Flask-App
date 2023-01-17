@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content-section">
+ <h1>{{hostel_name}}</h1>
+    <br>
+    <img src={{image_url}}>
+    <br>
+    <br>
+
+  <div class="row">
+  <div class="column">
+    <h5>Hostelworld Rating</h5>
+      <br>
+    <p><span>{{hostel_overall_rating}}</span></p>
+  </div>
+  <div class="column">
+    <h5>Predicted Rating</h5>
+      <br>
+    <p><span>{{predicted_rating}}</span></p>
+  </div>
+</div>
+<hr>
+      <div class="row">
+  <div class="column">
+    <h5>Positive Sentences in Reviews</h5>
+      <br>
+       <ol>
+    <!-- For loop logic of jinja template -->
+    {%for i in positive_reviews%}
+        <li>{{positive_reviews[i]}}{{i}}</li>
+    {%endfor%}
+    </ol>
+  </div>
+  <div class="column">
+    <h5>Negative Sentences in Reviews</h5>
+            <br>
+       <ol>
+        <!-- For loop logic of jinja template -->
+        {%for i in negative_reviews%}
+        <li>{{negative_reviews[i]}}{{i}}</li>
+        {%endfor%}
+        </ol>
+  </div>
+</div>
+    <hr>
+    <br>
+<h5>Possible Inaccurate Ratings</h5>
+    <br>
+    <table>
+  <tr>
+    <th>Review</th>
+    <th>Customer Rating</th>
+    <th>Predicted Rating</th>
+      <th>Difference</th>
+  </tr>
+     {%for i in possible_different_reviews%}
+      <tr>
+    <td>{{i['review_text']}}</td>
+    <td>{{i['review_rating']}}</td>
+  <td>{{i['predicted_review_rating']}}</td>
+          <td>{{i['actual_to_predicted_rating_difference']}}</td>
+        </tr>
+       {%endfor%}
+</table>
+
+ </div>
+<style>
+ul {
+    align:center;
+    text-align:center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #2c3e50;
+}
+</style>
+{% endblock content %}

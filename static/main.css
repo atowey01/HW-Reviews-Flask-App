@@ -1,0 +1,174 @@
+body {
+  background: #fafafa;
+  color: #333333;
+  margin-top: 5rem;
+    font-family: Lexend Deca,sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h4, h5, h6 {
+  color: #444444;
+    font-family: Lexend Deca,sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.bg-steel {
+  background-color: #f25621;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #fafafa;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: lightgrey;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+  color: blue;
+}
+
+.content-section {
+  background: #fafafa;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  text-align:left;
+  font-family: Lexend Deca,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+.content-section ul, .content-section li {
+    margin: 0; padding: 0;
+    padding: 10px 20px;
+    text-align:left;
+    font-family: Lexend Deca,sans-serif;
+   -webkit-font-smoothing: antialiased;
+}
+.content-section h1 {
+    padding: 10px 20px;
+    text-align:center;
+    font-family: Montserrat,sans-serif;
+    width: 100%;
+    font-weight: bold;
+}
+.content-section h4{
+    text-align:center;
+    font-family: Lexend Deca,sans-serif;
+   -webkit-font-smoothing: antialiased;
+    width: 100%;
+}
+
+.content-section h5{
+    align:center;
+    text-align:center;
+    font-family: Lexend Deca,sans-serif;
+   -webkit-font-smoothing: antialiased;
+}
+
+.retrieve-notice {
+    padding: 10px 20px;
+    text-align:center;
+    align:center;
+        font-family: Lexend Deca,sans-serif;
+   -webkit-font-smoothing: antialiased;
+}
+
+form{
+    text-align: center;
+}
+textarea {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+    font-family: Lexend Deca,sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+input[type=submit] {
+  width: 30%;
+  border-color: darkslategray;
+  background-color: #f25621;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border-radius: 20px;
+  cursor: pointer;
+  align:center;
+    font-family: Lexend Deca,sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+button {
+  width: 40%;
+  background-color: #f25621;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border-color: darkslategray;
+  border-radius: 20px;
+  cursor: pointer;
+  align:center;
+  margin: auto;
+}
+.buttonwrap {
+  text-align: center;
+}
+
+/* Create two equal columns that floats next to each other */
+.column{
+text-align: center;
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    text-align: center;
+  content: "";
+  display: table;
+  clear: both;
+}
+
+p span {
+    color: #fafafa;
+    font-family: Lexend Deca,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    border-color: darkslategray;
+    background-color: #f25621;
+    text-align: center;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+
+table, th, td {
+  border:1px solid black;
+  width:100%;
+  padding: 10px 5px
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
+hr {
+    border: none;
+    height: 1px;
+    /* Set the hr color */
+    color: grey; /* old IE */
+    background-color: grey; /* Modern Browsers */
+}
+
+.footer-basic {
+  padding:15px;
+  background-color:#EFECEC;
+  color:darkslategray;
+  text-align:center;
+}
+
