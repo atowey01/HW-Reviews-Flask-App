@@ -137,5 +137,5 @@ def predict():
 if __name__ == '__main__':
     # app.run()
     # TODO remove debug when working
-    app.run(debug=True)
+    app.run(debug=True, port=8081)
     # app.run(host='localhost', port=8081)
