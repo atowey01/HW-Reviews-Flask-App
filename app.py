@@ -1,10 +1,6 @@
-from flask import (Flask, render_template, url_for, flash,
-                   redirect, request, abort, Blueprint, session)
+from flask import (Flask, render_template, request)
 import flask
-from logger import logger
 from bs4 import BeautifulSoup
-import numpy as np
-import os
 from logger import logger
 import requests
 import itertools
