@@ -134,7 +134,7 @@ def predict():
                                  image_url=image_url)
 
 # dont need the below code when deploying - only for testing
-if __name__ == '__main__':
-    # app.run(port=8081)
-    app.run(debug=True, port=8080)
+# if __name__ == '__main__':
+#     # app.run(port=8081)
+#     app.run(debug=True, port=8080)
 #     # app.run(host='localhost', port=8081)
