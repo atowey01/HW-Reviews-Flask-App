@@ -20,9 +20,9 @@ from joblib import load
 app = Flask(__name__)
 
 logger.info(f"Loading model files")
-model = TFAutoModelForSequenceClassification.from_pretrained("hostelworld_sentiment_model")
+model = TFAutoModelForSequenceClassification.from_pretrained("../hostelworld_sentiment_model")
 tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
-regression_model = load('rating_prediction_model.joblib')
+regression_model = load('../rating_prediction_model.joblib')
 splitter = SentenceSplitter(language='en')
 logger.info(f"Model loaded")
 
