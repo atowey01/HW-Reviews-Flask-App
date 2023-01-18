@@ -133,9 +133,8 @@ def predict():
                                  possible_different_reviews=possible_different_reviews,
                                  image_url=image_url)
 
-
-if __name__ == '__main__':
-    app.run(port=8081)
-    # TODO remove debug when working
-    # app.run(debug=True, port=8081)
-    # app.run(host='localhost', port=8081)
+# dont need the below code when deploying - only for testing
+# if __name__ == '__main__':
+#     app.run(port=8081)
+#     # app.run(debug=True, port=8081)
+#     # app.run(host='localhost', port=8081)
