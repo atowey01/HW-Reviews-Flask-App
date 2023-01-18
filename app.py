@@ -28,16 +28,16 @@ splitter = SentenceSplitter(language='en')
 logger.info(f"Model loaded")
 
 @app.route('/')
-def home():
-    return flask.render_template('/templates/home.html')
+def index():
+    return flask.render_template('index.html')
 
 @app.route('/analyse-reviews')
 def analyse_reviews_button():
-    return render_template('/templates/analyse_reviews.html')
+    return render_template('analyse_reviews.html')
 
 @app.route('/reviews-analysed')
 def reviews_analysed():
-    return render_template('../templates/reviews_analysed.html')
+    return render_template('reviews_analysed.html')
 
 
 @app.route('/predict', methods=['POST'])
@@ -134,7 +134,7 @@ def predict():
                                  image_url=image_url)
 
 # dont need the below code when deploying - only for testing
-# if __name__ == '__main__':
-#     # app.run(port=8081)
-#     app.run(debug=True, port=8080)
+if __name__ == '__main__':
+    # app.run(port=8081)
+    app.run(debug=True, port=8080)
 #     # app.run(host='localhost', port=8081)
