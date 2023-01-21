@@ -94,19 +94,19 @@ input[type=submit] {
   background-color: #f25621;
   color: white;
   padding: 14px 20px;
-  margin: 8px 0;
+  margin: auto;
   border-radius: 20px;
   cursor: pointer;
   align:center;
     font-family: Lexend Deca,sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+
 button {
   width: 40%;
   background-color: #f25621;
   color: white;
   padding: 14px 20px;
-  margin: 8px 0;
   border-color: darkslategray;
   border-radius: 20px;
   cursor: pointer;
