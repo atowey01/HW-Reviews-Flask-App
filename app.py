@@ -1,4 +1,4 @@
-from flask import (Flask, render_template, request)
+from flask import (Flask, render_template, request, flash)
 import flask
 from bs4 import BeautifulSoup
 from logger import logger
@@ -15,6 +15,7 @@ from joblib import load
 ###################################################
 
 app = Flask(__name__)
+app.secret_key = "abc"  # TODO change this and put in private file
 
 logger.info(f"Loading model files")
 model = TFAutoModelForSequenceClassification.from_pretrained("atowey01/hostel-reviews-sentiment-model")
@@ -39,7 +40,10 @@ def reviews_analysed():
 @app.route('/predict', methods=['POST'])
 def predict():
     hostel_url = request.form['review_text']
-    hostel_id = re.findall('(/)([0-9]+)(/|/?)', hostel_url )[0][1]
+    try:
+        hostel_id = re.findall('(/)([0-9]+)(/|/?)', hostel_url )[0][1]
+    except:
+        return render_template('analyse_reviews.html', error='Please enter a valid URL')
     hostel_url = f'https://www.hostelworld.com/hosteldetails/{hostel_id}'
 
     hostel_response = requests.get(hostel_url)

@@ -4,6 +4,9 @@
 <form action="/predict" method="POST">
     <h4>Enter the URL of a hostel from Hostelworld:</h4>
  <textarea name="review_text" placeholder="" rows="3" cols="15"></textarea>
+        {% if error %}
+        <p><strong>Error</strong>: {{error}}</p>
+    {% endif %}
      <p class="buttonwrap">
           <a href=analyse-reviews-button><button>Analyse Reviews...</button></a>
       </p>
