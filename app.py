@@ -2,10 +2,10 @@ import flask
 from flask import (Flask, render_template, request)
 import re
 import numpy as np
-from helper_functions import (get_hostel_general_details,
-                              get_review_data,
-                              get_positive_and_negative_sentences,
-                              get_reviews_with_rating_different_from_predicted_rating)
+from helper_functions.app_helper_functions import (get_hostel_general_details,
+                                                   get_review_data,
+                                                   get_positive_and_negative_sentences,
+                                                   get_reviews_with_rating_different_from_predicted_rating)
 
 app = Flask(__name__)
 app.secret_key = "abc"  # TODO change this and put in private file

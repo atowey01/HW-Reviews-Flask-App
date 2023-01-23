@@ -11,7 +11,7 @@ import itertools
 logger.info(f"Loading model files")
 model = TFAutoModelForSequenceClassification.from_pretrained("atowey01/hostel-reviews-sentiment-model")
 tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
-regression_model = load('../models/rating_prediction_model.joblib')
+regression_model = load('models/rating_prediction_model.joblib')
 splitter = SentenceSplitter(language='en')
 logger.info(f"Model loaded")
 
