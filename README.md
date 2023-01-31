@@ -33,3 +33,5 @@ The model_training_scripts directory provides files and instructions for both sc
 The random forest rating prediction model is contained in this repo. The sentiment model is downloaded from the HuggingFace model hub.
 
 If the repository grows more the Flask code should be changed to include blueprints to improve readability.
+
+Tests and error pages need to be added.
