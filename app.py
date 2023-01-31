@@ -2,6 +2,7 @@ import flask
 from flask import (Flask, render_template, request)
 import re
 import numpy as np
+from flask_talisman import Talisman
 from helper_functions.app_helper_functions import (get_hostel_general_details,
                                                    get_review_data,
                                                    get_positive_and_negative_sentences,
@@ -45,3 +46,7 @@ def analyse_reviews():
                                  negative_reviews=negative_reviews,
                                  possible_different_reviews=possible_different_reviews,
                                  image_url=image_url)
+
+
+# Wrap Flask app with Talisman
+Talisman(app, content_security_policy=None)
